@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Fusion</title>
+</head>
+<body>
+  <h2>Color Fusion</h2>
+  
+  <!-- Checkboxes for color selection -->
+  <label><input type="checkbox" id="red"> Red</label>
+  <label><input type="checkbox" id="green"> Green</label>
+  <label><input type="checkbox" id="blue"> Blue</label>
+  
+  <!-- Fusion button -->
+  <button onclick="fuseColors()">Fusion</button>
+  
+  <script>
+    function fuseColors() {
+      // Get checkbox elements
+      const red = document.getElementById("red").checked;
+      const green = document.getElementById("green").checked;
+      const blue = document.getElementById("blue").checked;
+      
+      // Determine the alert message based on selected colors
+      let message;
+      if (red && green && blue) {
+        message = "White";
+      } else if (red && green) {
+        message = "Yellow";
+      } else if (red && blue) {
+        message = "Purple";
+      } else if (green && blue) {
+        message = "Cyan";
+      } else if (red) {
+        message = "Red";
+      } else if (green) {
+        message = "Green";
+      } else if (blue) {
+        message = "Blue";
+      } else {
+        message = "Black";
+      }
+      
+      // Display the alert with the appropriate message
+      alert(message);
+    }
+  </script>
+</body>
+</html>

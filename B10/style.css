@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .countdown {
+    position: relative;
+    width: 120px;
+    height: 120px;
+  }
+  
+  .countdown svg {
+    width: 120px;
+    height: 120px;
+    transform: rotate(-90deg);
+  }
+  
+  .countdown circle {
+    fill: none;
+    stroke-width: 10;
+    stroke-dasharray: 314;
+    stroke-dashoffset: 0;
+  }
+  
+  .countdown circle:first-child {
+    stroke: #e0e0e0;
+  }
+  
+  #progress {
+    transition: stroke-dashoffset 1s linear, stroke 0.5s;
+    stroke: green;
+  }
+  
+  #time {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+  }
+  

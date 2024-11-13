@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="margin: 0; padding: 0">
+    <div class="" style="display: grid; place-items: center; height: 100vh">
+      <div
+        class="card"
+        style="
+          display: flex;
+          flex-direction: column;
+          border: 1px solid;
+          padding: 3rem;
+        "
+      >
+        <h1>Password</h1>
+        <input type="password" name="" id="inputPassword" />
+        <input type="submit" value="show" id="btnSubmit" />
+      </div>
+    </div>
+    <script>
+      const pass = document.getElementById("inputPassword");
+      const submit = document.getElementById("btnSubmit");
+
+      submit.addEventListener("click", function () {
+        if (submit.value == "show") {
+          submit.value = "hide";
+          pass.type = "text";
+        } else {
+          submit.value = "show";
+          pass.type = "password";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(49, 49, 49);
+        color: white;
+      }
+      .accordion {
+        width: 50%;
+      }
+      .acc-header {
+        padding: 20px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+      }
+      .acc-content {
+        padding: 10px;
+        display: none;
+      }
+      .plus-icon{
+        width: 30px;
+        height: 30px;
+        border: 1px solid;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome</h1>
+    <div class="accordion">
+      <div class="acc-item">
+        <div class="acc-header">
+          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+          <div class="plus-icon">+</div>
+        </div>
+        <div class="acc-content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+            sit maiores reprehenderit accusamus velit fugit nisi harum incidunt,
+            ea deserunt illum, nesciunt provident voluptates rem adipisci
+            aliquam magni eveniet numquam aliquid, quis exercitationem! Placeat,
+            tempore nostrum accusamus soluta laudantium sunt.
+          </p>
+        </div>
+        <hr />
+      </div>
+      <div class="acc-item">
+        <div class="acc-header">
+          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+          <div class="plus-icon">+</div>
+        </div>
+        <div class="acc-content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+            sit maiores reprehenderit accusamus velit fugit nisi harum incidunt,
+            ea deserunt illum, nesciunt provident voluptates rem adipisci
+            aliquam magni eveniet numquam aliquid, quis exercitationem! Placeat,
+            tempore nostrum accusamus soluta laudantium sunt.
+          </p>
+        </div>
+        <hr />
+      </div>
+      <div class="acc-item">
+        <div class="acc-header">
+          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+          <div class="plus-icon">+</div>
+        </div>
+        <div class="acc-content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+            sit maiores reprehenderit accusamus velit fugit nisi harum incidunt,
+            ea deserunt illum, nesciunt provident voluptates rem adipisci
+            aliquam magni eveniet numquam aliquid, quis exercitationem! Placeat,
+            tempore nostrum accusamus soluta laudantium sunt.
+          </p>
+        </div>
+        <hr />
+      </div>
+    </div>
+    <script>
+      const accHeader = document
+        .querySelectorAll(".acc-header")
+        .forEach((header) => {
+          header.addEventListener("click", function () {
+            const content = header.nextElementSibling;
+            console.log(content);
+            content.style.display =
+              content.style.display == "block" ? "none" : "block";
+
+            document
+              .querySelectorAll(".acc-content")
+              .forEach((otherContent) => {
+                if (otherContent !== content) {
+                  otherContent.style.display = "none";
+                }
+              });
+          });
+        });
+    </script>
+  </body>
+</html>

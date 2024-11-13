@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  
+  #wheelOfFortune {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  #wheel {
+    display: block;
+  }
+  
+  .pin {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid black;
+  }
+
+  #spin{
+    padding: 1rem;
+    background-color: rgb(16, 160, 222);
+    color: white;
+    border-radius: 1rem;
+    margin: 1rem;
+    cursor: pointer;
+  }
+  
